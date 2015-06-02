@@ -9,6 +9,8 @@ namespace Fibonacci
     /*
      * Calculates the fibonacci sequence in a console application
      * 
+     * test
+     * 
      * @Author Martin Moors
      */
     class Program
