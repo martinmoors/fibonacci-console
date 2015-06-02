@@ -9,7 +9,7 @@ namespace Fibonacci
     /*
      * Calculates the fibonacci sequence in a console application
      * 
-     * test
+     * test test2
      * 
      * @Author Martin Moors
      */
