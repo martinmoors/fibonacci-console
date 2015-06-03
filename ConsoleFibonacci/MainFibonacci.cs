@@ -15,11 +15,8 @@ namespace de.gso
     {
         static void Main(string[] args)
         {
-            Fibonacci fibonacci = new Fibonacci();
-            String position = "";
-            Console.Write("Bitte Position eingeben: ");
-            position = Console.ReadLine();
-            fibonacci.toString(fibonacci.calcSeq(Convert.ToInt32(position) - 1));
+            Fibonacci fib = new Fibonacci();
+            fib.toString(fib.calcSeq(Convert.ToInt32(fib.getPosition()) - 1));
         }
     }
 }
