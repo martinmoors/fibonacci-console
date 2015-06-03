@@ -8,15 +8,15 @@ namespace Maddin
 {
     public class Fibonacci
     {
-        public int[] calcSeq()
+        public int[] calcSeq(int position)
         {
-            int[] fibonacci = new int[9];
+            int[] fibonacci = new int[position+1];
 
-            for (int n = 1; n <= 8; n++)
+            for (int n = 1; n <= position; n++)
             {
                 fibonacci[n - 1] = n;
             }
-            for (int i = 3; i <= 8; i++)
+            for (int i = 3; i <= position; i++)
             {
                 fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2];
             }
@@ -25,7 +25,7 @@ namespace Maddin
 
         public void toString(int[] seq)
         {
-            for (int i = 0; i <= 8; i++)
+            for (int i = 0; i <= seq.Length-1; i++)
             {
                 System.Console.Write(seq[i] + " ");
             }

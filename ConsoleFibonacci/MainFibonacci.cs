@@ -16,10 +16,10 @@ namespace Maddin
         static void Main(string[] args)
         {
             Fibonacci fibonacci = new Fibonacci();
-            fibonacci.toString(fibonacci.calcSeq());
-           
+            String position = "";
+            Console.Write("Bitte Position eingeben: ");
+            position = Console.ReadLine();
+            fibonacci.toString(fibonacci.calcSeq(Convert.ToInt32(position)-1));
         }
-
-        
     }
 }
