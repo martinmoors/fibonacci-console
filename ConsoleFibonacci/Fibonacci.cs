@@ -10,13 +10,13 @@ namespace Maddin
     {
         public int[] calcSeq()
         {
-            int[] fibonacci = new int[46];
+            int[] fibonacci = new int[9];
 
-            for (int n = 1; n <= 43; n++)
+            for (int n = 1; n <= 8; n++)
             {
                 fibonacci[n - 1] = n;
             }
-            for (int i = 3; i <= 43; i++)
+            for (int i = 3; i <= 8; i++)
             {
                 fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2];
             }
@@ -25,13 +25,13 @@ namespace Maddin
 
         public void toString(int[] seq)
         {
-            Console.Write("1 2 3 ");
-            for (int i = 3; i <= 43; i++)
+            //Console.Write("1 2 3 ");
+            for (int i = 0; i <= 8; i++)
             {
                 System.Console.Write(seq[i] + " ");
                 if (i % 5 == 0)
                 {
-                    Console.WriteLine();
+                    //Console.WriteLine();
                 }
             }
             Console.WriteLine();

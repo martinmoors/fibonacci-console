@@ -12,7 +12,7 @@ namespace Maddin
             Fibonacci fibonacci = new Fibonacci();
             int[] seq = fibonacci.calcSeq();
             int[] seqAssumed = { 1, 2, 3, 5, 8, 13, 21, 34, 55 };
-            Assert.AreEqual(seqAssumed[0], seq[0]);
+            CollectionAssert.AreEqual(seqAssumed, seq);
         }
     }
 }
