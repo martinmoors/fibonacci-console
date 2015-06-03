@@ -25,14 +25,9 @@ namespace Maddin
 
         public void toString(int[] seq)
         {
-            //Console.Write("1 2 3 ");
             for (int i = 0; i <= 8; i++)
             {
                 System.Console.Write(seq[i] + " ");
-                if (i % 5 == 0)
-                {
-                    //Console.WriteLine();
-                }
             }
             Console.WriteLine();
             Console.WriteLine("Press any key to exit.");
