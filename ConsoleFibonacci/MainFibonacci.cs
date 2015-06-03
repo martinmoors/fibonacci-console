@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Maddin
+namespace de.gso
 {
     /*
      * Calculates the fibonacci sequence in a console application
@@ -19,7 +19,7 @@ namespace Maddin
             String position = "";
             Console.Write("Bitte Position eingeben: ");
             position = Console.ReadLine();
-            fibonacci.toString(fibonacci.calcSeq(Convert.ToInt32(position)-1));
+            fibonacci.toString(fibonacci.calcSeq(Convert.ToInt32(position) - 1));
         }
     }
 }

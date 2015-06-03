@@ -4,13 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Maddin
+namespace de.gso
 {
+    /*
+     * Calculates the fibonacci sequence in a console application
+     * 
+     * @Author Martin Moors
+     */
     public class Fibonacci
     {
         public int[] calcSeq(int position)
         {
-            int[] fibonacci = new int[position+1];
+            int[] fibonacci = new int[position + 1];
 
             for (int n = 1; n <= position; n++)
             {

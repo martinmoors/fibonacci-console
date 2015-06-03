@@ -1,8 +1,13 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Maddin;
-namespace Maddin
+
+namespace de.gso
 {
+    /*
+     * Tests the calculations of the fibonacci sequence
+     * 
+     * @Author Martin Moors
+     */
     [TestClass]
     public class FibonacciTests
     {
