@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace de.gso
 {
+
     /*
      * Calculates the fibonacci sequence in a console application
      * 
@@ -13,19 +14,45 @@ namespace de.gso
      */
     public class Fibonacci
     {
-        public int[] calcSeq(int position)
-        {
-            int[] fibonacci = new int[position + 1];
 
-            for (int n = 1; n <= position; n++)
+        int[] fib;
+
+        public void initArray(int pos)
+        {
+            fib = new int[pos];
+        }
+       
+        public int[] calcSeq(int pos)
+        {
+            ///int[] fibonacci = new int[pos + 1];
+           
+            fillArrayRecursive(1, pos - 2);
+
+            calculateSequenceRecursive(2, pos - 2);
+
+            fib[0] = 1;
+
+            return fib;
+        }
+
+        public void calculateSequenceRecursive(int l, int pos)
+        {
+            if (l <= pos)
             {
-                fibonacci[n - 1] = n;
+                l++;
+                fib[l] = fib[l - 1] + fib[l - 2];
+                calculateSequenceRecursive(l, pos);
             }
-            for (int i = 3; i <= position; i++)
+        }
+
+        public void fillArrayRecursive(int l, int pos) {
+           
+            if (l <= pos)
             {
-                fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2];
+                l++;
+                fib[l - 1] = l;
+                fillArrayRecursive(l, pos);
             }
-            return fibonacci;
         }
 
         public void toString(int[] seq)
@@ -42,9 +69,10 @@ namespace de.gso
                     System.Console.Write("1 2 3");
                     break;
                 default:
+                   //System.Console.Write("1, ");
                     for (int i = 0; i <= seq.Length - 1; i++)
                     {
-                        System.Console.Write(seq[i] + " ");
+                        System.Console.Write(seq[i] + ", ");
                     }
                     break;
             }
