@@ -24,8 +24,6 @@ namespace de.gso
        
         public int[] calcSeq(int pos)
         {
-            ///int[] fibonacci = new int[pos + 1];
-           
             fillArrayRecursive(1, pos - 2);
 
             calculateSequenceRecursive(2, pos - 2);
@@ -69,7 +67,6 @@ namespace de.gso
                     System.Console.Write("1 2 3");
                     break;
                 default:
-                   //System.Console.Write("1, ");
                     for (int i = 0; i <= seq.Length - 1; i++)
                     {
                         System.Console.Write(seq[i] + ", ");
