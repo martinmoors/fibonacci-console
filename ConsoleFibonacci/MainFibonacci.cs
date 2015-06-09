@@ -16,7 +16,9 @@ namespace de.gso
         static void Main(string[] args)
         {
             Fibonacci fib = new Fibonacci();
-            fib.toString(fib.calcSeq(Convert.ToInt32(fib.getPosition()) - 1));
+            int pos = Convert.ToInt32(fib.getPosition());
+            fib.initArray(pos);
+            fib.toString(fib.calcSeq(pos));
         }
     }
 }
