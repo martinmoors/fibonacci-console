@@ -8,21 +8,21 @@ namespace de.gso
 {
 
     /*
-     * Calculates the fibonacci sequence in a console application
+     * Calculates the fibonacci sequence in an console application
      * 
      * @Author Martin Moors
      */
     public class Fibonacci
     {
 
-        int[] fib;
+        long[] fib;
 
         public void initArray(int pos)
         {
-            fib = new int[pos];
+            fib = new long[pos];
         }
        
-        public int[] calcSeq(int pos)
+        public long[] calcSeq(int pos)
         {
             fillArrayRecursive(1, pos - 2);
 
@@ -53,7 +53,7 @@ namespace de.gso
             }
         }
 
-        public void toString(int[] seq)
+        public void toString(long[] seq)
         {
             switch (seq.Length)
             {
@@ -69,7 +69,7 @@ namespace de.gso
                 default:
                     for (int i = 0; i <= seq.Length - 1; i++)
                     {
-                        System.Console.Write(seq[i] + ", ");
+                        System.Console.WriteLine(seq[i]);
                     }
                     break;
             }
